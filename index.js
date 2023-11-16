@@ -104,7 +104,7 @@ function hobbies(){
 
 function stackGoals(){
   let stack = new SetText("interests")
-  aboutText.fill(["<span class='pn_icon'></span>Phindile Sihle Xulu", 
+  stack.fill(["<span class='pn_icon'></span>Phindile Sihle Xulu", 
   "<span class='phone_icon'></span>0630226933", 
   "<span class='ln_icon'></span><a href=\"https://www.linkedin.com/in/phindile-xulu-1b8122172/\" target=\"_blank\">linkedin.com/in/phindile-xulu-1b8122172/</a>", 
   "<span class=\"at_icon\"></span><a>codepen.io/phindilex</a>", 
