@@ -81,9 +81,20 @@ a{
     grid-area: interests;
     background-color: #FFC6FF;
 }
-#image1{
+#home{
     grid-area: pic1;
-    background-image: url("./img/standing.jpeg") ;
+    background-image: url("./img/standing.jpeg");
+    background: linear-gradient(#e66465, #9198e5);
     background-position: center;
 }
 
+.empty{
+    background: linear-gradient(#e66465, #9198e5);
+    background-image: url("./img/SPARKLES.gif");
+    background-size: cover;
+}
+
+.selected{
+    font-size: 2rem;
+    text-decoration: underline;
+}
