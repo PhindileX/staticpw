@@ -7,13 +7,16 @@ class SetText{
     "Side Projects" : document.querySelector("#side_projects"),
     "goals" : document.querySelector("#goals"),
     "hobbies" : document.querySelector("#hobbies"),
-    "interests" : document.querySelector("#interests"),
+    "Stack Goals" : document.querySelector("#stack_goals"),
     "home" : document.querySelector("#home"),
   }
   constructor(element){
     this.target = element
+    this.contentSet[this.target].classList.add("selected")
+
   }
   fill(details){
+
     let counter = 0
     
     for(var key in this.contentSet){
@@ -21,10 +24,20 @@ class SetText{
         this.contentSet[key].innerHTML = this.target.charAt(0).toUpperCase() + this.target.slice(1)
       }
       else if(key=="home"){
+        this.contentSet[key].classList.remove("selected")
+
       }
       else{
-        this.contentSet[key].innerHTML = details[counter]
-        counter++
+        this.contentSet[key].classList.remove("selected")
+
+        if(details[counter]==""){
+          this.contentSet[key].innerHTML = ""
+          this.contentSet[key].classList.add("empty")
+        }else{
+          this.contentSet[key].classList.remove("empty")
+          this.contentSet[key].innerHTML = details[counter]
+          counter++
+        }
 
       }
       
@@ -40,7 +53,7 @@ class SetText{
 
 function home(){
   let text = new SetText("home")
-  text.fill(["About", "Education", "Work Experience", "Side Projects", "Goals", "Hobbies", "Stack goals" ])
+  text.fill(["About", "Education", "Work Experience", "Side Projects", "Goals", "Hobbies", "Stack Goals" ])
 
 }
 
@@ -57,15 +70,20 @@ function about(){
 
 function edu(){
   let eduText = new SetText("Education")
-  eduText.fill(["","","University:<br> University of Cape Town <br> Bsc Computer Science", "","","Certification: <br> freecodecamp.org <br> <a href=\"https://www.freecodecamp.org/certification/phindile/responsive-web-design\" target='_blank'>View Certificate</a>"])
+  eduText.fill([
+  "University:<br> University of Cape Town <br> Bsc Computer Science",
+  "Certification: <br> freecodecamp.org <br> <a href=\"https://www.freecodecamp.org/certification/phindile/responsive-web-design\" target='_blank'>View Certificate</a>",
+  "",
+  "",
+])
 }
 
 function we(){
 let workText = new SetText("Work Experience")
 workText.fill(["iXperience <br> Full stack web dev <br> 3months", 
 "UCT<br>Dining hall monitor<br>12 months", "UCT<br>First Years mentor<br>10months", 
-"","",
-"UCT<br>House Commeetee<br>10months"])
+"",
+"UCT<br>House Commeetee<br>10months", ""])
 }
 
 function side_projects(){
@@ -103,7 +121,7 @@ function hobbies(){
 }
 
 function stackGoals(){
-  let stack = new SetText("interests")
+  let stack = new SetText("Stack Goals")
   stack.fill(["<span class='pn_icon'></span>Phindile Sihle Xulu", 
   "<span class='phone_icon'></span>0630226933", 
   "<span class='ln_icon'></span><a href=\"https://www.linkedin.com/in/phindile-xulu-1b8122172/\" target=\"_blank\">linkedin.com/in/phindile-xulu-1b8122172/</a>", 
