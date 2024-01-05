@@ -7,7 +7,7 @@ class SetText{
     "Side Projects" : document.querySelector("#side_projects"),
     "goals" : document.querySelector("#goals"),
     "hobbies" : document.querySelector("#hobbies"),
-    "Stack Goals" : document.querySelector("#stack_goals"),
+    "Stack" : document.querySelector("#stack"),
     "home" : document.querySelector("#home"),
   }
   constructor(element){
@@ -53,7 +53,7 @@ class SetText{
 
 function home(){
   let text = new SetText("home")
-  text.fill(["About", "Education", "Work Experience", "Side Projects", "Goals", "Hobbies", "Stack Goals" ])
+  text.fill(["About", "Education", "Work Experience", "Side Projects", "Goals", "Hobbies", "Stack" ])
 
 }
 
@@ -120,14 +120,14 @@ function hobbies(){
   ])
 }
 
-function stackGoals(){
-  let stack = new SetText("Stack Goals")
-  stack.fill(["<span class='pn_icon'></span>Phindile Sihle Xulu", 
-  "<span class='phone_icon'></span>0630226933", 
-  "<span class='ln_icon'></span><a href=\"https://www.linkedin.com/in/phindile-xulu-1b8122172/\" target=\"_blank\">linkedin.com/in/phindile-xulu-1b8122172/</a>", 
-  "<span class=\"at_icon\"></span><a>codepen.io/phindilex</a>", 
-  "<span class=\"at_icon\"></span>kpl.web.app", 
-  "<span class=\"email_icon\"></span>xuluphindile84@gmail.com", 
+function stack(){
+  let stack_ = new SetText("Stack")
+  stack_.fill(["HTML", 
+  "CSS", 
+  "JAVA/TYPESCRIPT", 
+  "JAVA",  
+  "PYTHON",
+  "EXPRESS",
+  "",
   ])
-  console.log("In stack goals")
 }
